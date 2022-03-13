@@ -1,13 +1,100 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --color-primary: #24292f;
+}
+
+.header {
+  background-color: var(--color-primary);
+  width: 100%;
+  height: 5rem;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-block: 0.5rem;
+}
+
+.title {
+  color: white;
+}
+
+.body {
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding-block: 0.3rem;
+  padding-inline: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.user-name-input {
+  border: none;
+  outline: none;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.user-card {
+  background-color: var(--color-primary);
+  margin-bottom: 20px;
+  width: 70%;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.user-card:hover {
+  background-color: white;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.detail-container {
+  background-color: white;
+  border-radius: 1rem;
+  width: 80%;
+  height: 50vh;
+  padding: 1rem;
+  position: absolute;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
