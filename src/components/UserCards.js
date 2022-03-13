@@ -61,7 +61,6 @@ const UserCards = ({
               <img src={user.avatar_url} alt="avatar" className="avatar"></img>
               <div>
                 <h3>{user.login}</h3>
-                {/* <h2>{userDetail.name}</h2> */}
               </div>
             </div>
           );

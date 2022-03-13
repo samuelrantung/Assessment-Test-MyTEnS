@@ -4,8 +4,8 @@ import {
   RepositoryList,
   SearchBar,
   Header,
-  Navigation,
   UserCards,
+  Footer,
 } from "./components";
 import "./index.css";
 
@@ -21,13 +21,11 @@ const App = () => {
   useEffect(() => {
     axios.get("https://api.github.com/search/users?q=in:user").then((res) => {
       setUsers(res.data.items);
-
-      console.log("axios first");
     });
   }, []);
 
   return (
-    <div className="container">
+    <div>
       <Header />
       <div className="body">
         <SearchBar setSearch={setSearch} search={search} setUsers={setUsers} />
@@ -56,6 +54,7 @@ const App = () => {
           setUsers={setUsers}
         />
       </div>
+      <Footer />
     </div>
   );
 };
