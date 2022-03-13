@@ -92,9 +92,34 @@
   background-color: white;
   border-radius: 1rem;
   width: 80%;
-  height: 50vh;
   padding: 1rem;
   position: absolute;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.user-detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-name {
+  color: #696969;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+.row-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.row-repository {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }

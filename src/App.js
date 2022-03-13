@@ -53,16 +53,47 @@ const App = () => {
               onClick={() => setRepositoryOpen(!repositoryOpen)}
             ></div>
             <div className="detail-container">
-              <img
-                src={`${userDetail.avatar_url}`}
-                alt="avatar"
-                className="avatar"
-              ></img>
-              <h3>{userDetail.name}</h3>
-              <h3>{userDetail.login}</h3>
+              <div className="row">
+                <i className="fa fa-book-bookmark fa-invert"></i>
+
+                <img
+                  src={`${userDetail.avatar_url}`}
+                  alt="avatar"
+                  className="avatar"
+                ></img>
+                <div className="user-detail-container">
+                  <div className="row-name">
+                    <h3>{userDetail.name}</h3>
+                    <h4 className="login-name">{userDetail.login}</h4>
+                  </div>
+                  <div>
+                    <p>{userDetail.bio}</p>
+                  </div>
+                </div>
+              </div>
+              {repositories ? (
+                <div className="row-repository">
+                  <i className="fa fa-book"></i>
+                  <p>Repository Lists :</p>
+                </div>
+              ) : (
+                <></>
+              )}
               {repositories ? (
                 repositories.map((repo) => {
-                  return <p>{repo.name}</p>;
+                  console.log(repo);
+                  return (
+                    <div>
+                      <a
+                        href={`${repo.html_url}`}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        {repo.name}
+                      </a>
+                      {/* <p>{repo.name}</p> */}
+                    </div>
+                  );
                 })
               ) : (
                 <></>
