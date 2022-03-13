@@ -4,11 +4,25 @@ import React from "react";
 const Navigation = ({ currentPage, next, previous }) => {
   return (
     <div className="navigation">
-      <a onClick={() => previous(currentPage)} href="#" className="previous">
+      <a
+        onClick={(e) => {
+          e.preventDefault();
+          previous(currentPage);
+        }}
+        href="#"
+        className="previous"
+      >
         &laquo; Previous
       </a>
       <p>{currentPage}</p>
-      <a onClick={() => next(currentPage)} href="#" className="next">
+      <a
+        onClick={(e) => {
+          e.preventDefault();
+          next(currentPage);
+        }}
+        href="#"
+        className="next"
+      >
         Next &raquo;
       </a>
     </div>
