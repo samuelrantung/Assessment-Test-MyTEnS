@@ -123,3 +123,40 @@
   align-items: center;
   gap: 0.3rem;
 }
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.navigation a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  width: 100px;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  opacity: 1;
+  transition: 0.1s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.navigation a:hover {
+  opacity: 0.85;
+}
+
+.navigation p {
+  display: flex;
+  margin: 0 10px;
+  background-color: var(--color-secondary);
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
