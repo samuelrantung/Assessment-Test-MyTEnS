@@ -15,10 +15,10 @@ const UserCards = ({
   setUsers,
 }) => {
   const OpenRepository = async (user) => {
-    // console.log(user);
     axios.get(`${user.url}`).then((res) => setUserDetail(res.data));
     axios.get(`${user.repos_url}`).then((repo) => setRepositories(repo.data));
     setRepositoryOpen(!repositoryOpen);
+    window.scrollTo({ top: 100, behavior: "smooth" });
   };
   //User list next page
   const next = async (pageNumber) => {

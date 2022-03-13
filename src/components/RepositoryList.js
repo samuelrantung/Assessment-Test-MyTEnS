@@ -49,7 +49,7 @@ const RepositoryList = ({
           ></img>
           <div className="user-detail-container">
             <div className="row-name">
-              <h3>{userDetail.name}</h3>
+              <h2>{userDetail.name}</h2>
               <h4 className="login-name">{userDetail.login}</h4>
             </div>
             <div>
@@ -57,10 +57,12 @@ const RepositoryList = ({
             </div>
           </div>
         </div>
+        <hr></hr>
         <div className="row-repository">
           <i className="fa fa-book"></i>
           <p>Repository Lists</p>
         </div>
+        <hr></hr>
 
         {repositories.length > 0 ? (
           repositories.map((repo) => {
@@ -88,6 +90,15 @@ const RepositoryList = ({
         ) : (
           <></>
         )}
+        <div className="close-repo-container">
+          <a
+            onClick={() => setRepositoryOpen(!repositoryOpen)}
+            className="close-repo"
+            href="#"
+          >
+            Close
+          </a>
+        </div>
       </div>
     </>
   );
