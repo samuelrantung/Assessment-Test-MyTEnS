@@ -50,17 +50,11 @@ const App = () => {
           setRepositories={setRepositories}
           setRepositoryOpen={setRepositoryOpen}
           repositoryOpen={repositoryOpen}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          search={search}
+          setUsers={setUsers}
         />
-        {users.length > 0 ? (
-          <Navigation
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            setUsers={setUsers}
-            search={search}
-          />
-        ) : (
-          <></>
-        )}
       </div>
     </div>
   );

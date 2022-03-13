@@ -74,9 +74,20 @@
 }
 
 .avatar {
-  width: 50px;
-  height: 50px;
+  /* min-width: 50px;
+  min-height: 50px; */
+  max-width: 50px;
+  max-height: 50px;
   border-radius: 100%;
+  margin: 1rem;
+}
+.avatar-repo {
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 100%;
+  margin: 1rem;
 }
 
 .overlay {
@@ -98,6 +109,13 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+@media (min-width: 500px) {
+  .detail-container {
+    padding: 5%;
+    width: 70%;
+  }
+}
+
 .user-detail-container {
   display: flex;
   flex-direction: column;
@@ -115,7 +133,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .row-repository {

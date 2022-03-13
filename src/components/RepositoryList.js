@@ -12,7 +12,7 @@ const RepositoryList = ({
   setRepositories,
 }) => {
   //Repositories next page
-  const nextRepo = async (pageNumber) => {
+  const next = async (pageNumber) => {
     setCurrentPageRepo(pageNumber + 1);
     await axios
       .get(`${userDetail.repos_url}?page=${pageNumber + 1}`)
@@ -22,7 +22,7 @@ const RepositoryList = ({
   };
 
   //Repositories previous page
-  const previousRepo = async (pageNumber) => {
+  const previous = async (pageNumber) => {
     if (pageNumber > 1) {
       setCurrentPageRepo(pageNumber - 1);
       await axios
@@ -45,7 +45,7 @@ const RepositoryList = ({
           <img
             src={`${userDetail.avatar_url}`}
             alt="avatar"
-            className="avatar"
+            className="avatar-repo"
           ></img>
           <div className="user-detail-container">
             <div className="row-name">
@@ -57,14 +57,11 @@ const RepositoryList = ({
             </div>
           </div>
         </div>
-        {repositories ? (
-          <div className="row-repository">
-            <i className="fa fa-book"></i>
-            <p>Repository Lists :</p>
-          </div>
-        ) : (
-          <></>
-        )}
+        <div className="row-repository">
+          <i className="fa fa-book"></i>
+          <p>Repository Lists</p>
+        </div>
+
         {repositories.length > 0 ? (
           repositories.map((repo) => {
             return (
@@ -85,8 +82,8 @@ const RepositoryList = ({
         {repositories ? (
           <Navigation
             currentPage={currentPageRepo}
-            next={nextRepo}
-            previous={previousRepo}
+            next={next}
+            previous={previous}
           />
         ) : (
           <></>
